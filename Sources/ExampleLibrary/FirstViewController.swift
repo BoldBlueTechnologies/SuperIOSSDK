@@ -11,10 +11,10 @@ public class FirstViewController: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .purple
 
         let button = UIButton(type: .system)
-        button.setTitle("Go to Second Screen", for: .normal)
+        button.setTitle("Go to Second Screen v2", for: .normal)
         button.addTarget(self, action: #selector(goToSecondScreen), for: .touchUpInside)
         button.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
         view.addSubview(button)
