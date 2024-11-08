@@ -27,8 +27,9 @@ public class FirstViewController: UIViewController {
 }
 public extension UIViewController{
        
-    static func getStoryboardVC() -> UIViewController {
-        let storyboard = UIStoryboard(name: String(describing: self), bundle: nil) // Use Bundle.module
-           return storyboard.instantiateInitialViewController()!
-       }
+    static func createViewController() -> UIViewController {
+        let storyboard = UIStoryboard(name: "FirstViewController", bundle: Bundle.module)
+        return storyboard.instantiateInitialViewController() as! FirstViewController
+    }
+
 }
