@@ -14,11 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 //        view.backgroundColor = .white
 //
-//        let button = UIButton(type: .system)
-//        button.setTitle("Open Insurance Flow", for: .normal)
-//        button.addTarget(self, action: #selector(openInsuranceFlow), for: .touchUpInside)
-//        button.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
-//        view.addSubview(button)
+        let button = UIButton(type: .system)
+        button.setTitle("Start", for: .normal)
+        button.addTarget(self, action: #selector(openInsuranceFlow), for: .touchUpInside)
+        button.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
+        view.addSubview(button)
     }
 
     @objc private func openInsuranceFlow() {
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 //        present(navigationController, animated: true, completion: nil)
         
         
-        let storyboard = UIStoryboard(name: "SuperMx", bundle: nil)
+        let storyboard = UIStoryboard(name: "SuperSDK", bundle: nil)
         let switchViewController = storyboard.instantiateViewController(
             withIdentifier: "FirstView") as! FirstViewController
         switchViewController.modalPresentationStyle = .popover
