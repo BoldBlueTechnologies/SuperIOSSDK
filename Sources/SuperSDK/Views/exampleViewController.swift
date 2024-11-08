@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import Alamofire
 
 public class exampleViewController: UIViewController {
     
     public static let storyboardVC = UIStoryboard(name: "Storyboard", bundle: Bundle.module).instantiateInitialViewController()!
-    
     
     var pokemones: [String] = ["1","2","3","4","5","6","7","8","9","10"]
     
@@ -20,10 +20,16 @@ public class exampleViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        pokemonsTableView.register(UINib(nibName: "pokemonTableViewCell", bundle: nil), forCellReuseIdentifier: "pokemonTableViewCell")
-        
-        pokemonsTableView.dataSource = self
-        pokemonsTableView.delegate = self
+//        pokemonsTableView.register(UINib(nibName: "pokemonTableViewCell", bundle: nil), forCellReuseIdentifier: "pokemonTableViewCell")
+//        
+//        pokemonsTableView.dataSource = self
+//        pokemonsTableView.delegate = self
+    }
+    
+    func getAllPokemons() {
+        AF.request("https://pokeapi.co/api/v2/pokemon").responseJSON { response in
+            debugPrint(response)
+        }
     }
     
 
