@@ -22,9 +22,17 @@ class ViewController: UIViewController {
     }
 
     @objc private func openInsuranceFlow() {
-        let firstVC = FirstViewController()
-        let navigationController = UINavigationController(rootViewController: firstVC)
-        present(navigationController, animated: true, completion: nil)
+//        let firstVC = FirstViewController()
+//        let navigationController = UINavigationController(rootViewController: firstVC)
+//        present(navigationController, animated: true, completion: nil)
+        
+        
+        let storyboard = UIStoryboard(name: "SuperMx", bundle: nil)
+        let switchViewController = storyboard.instantiateViewController(
+            withIdentifier: "FirstView") as! FirstViewController
+        switchViewController.modalPresentationStyle = .popover
+        switchViewController.isModalInPresentation = true
+        self.present(UINavigationController(rootViewController: switchViewController), animated: true, completion: nil)
     }
 }
 
