@@ -9,7 +9,7 @@ import UIKit
 
 public class exampleViewController: UIViewController {
 
-    public static let storyboardVC = UIStoryboard(name: "exampleViewController", bundle: Bundle.module).instantiateInitialViewController()!
+    public static let storyboardVC = UIStoryboard(name: "Storyboard", bundle: Bundle.module).instantiateInitialViewController()!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
