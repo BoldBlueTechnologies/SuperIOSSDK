@@ -9,7 +9,7 @@ import UIKit
 
 public class welcomeViewController: UIViewController {
 
-    public static let storyboardVC = UIStoryboard(name: "Storyboard 2", bundle: Bundle.module).instantiateInitialViewController()!
+    public static let storyboardVC = UIStoryboard(name: "Storyboard", bundle: Bundle.module).instantiateInitialViewController()!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
