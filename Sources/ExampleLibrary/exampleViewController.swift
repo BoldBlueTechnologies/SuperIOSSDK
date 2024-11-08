@@ -7,11 +7,11 @@
 
 import UIKit
 
-class exampleViewController: UIViewController {
+public class exampleViewController: UIViewController {
 
     public static let storyboardVC = UIStoryboard(name: "exampleViewController", bundle: Bundle.module).instantiateInitialViewController()!
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
