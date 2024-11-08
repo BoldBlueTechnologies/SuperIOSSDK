@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Example View Controller-->
+        <scene sceneID="EPc-sj-ogF">
+            <objects>
+                <viewController storyboardIdentifier="exampleViewController" id="bld-Oi-02a" customClass="exampleViewController" customModule="SuperSDK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tCB-rK-hs7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperMx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARj-v0-5qQ">
+                                <rect key="frame" x="20" y="89" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOB-j7-5PG">
+                                <rect key="frame" x="15" y="125" width="363" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpU-iQ-f39">
+                                <rect key="frame" x="15" y="151" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rlc-gP-ZIu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bpU-iQ-f39" firstAttribute="leading" secondItem="Rlc-gP-ZIu" secondAttribute="leading" constant="15" id="6LL-SP-sDG"/>
+                            <constraint firstItem="AOB-j7-5PG" firstAttribute="top" secondItem="ARj-v0-5qQ" secondAttribute="bottom" constant="15" id="EP6-hC-efw"/>
+                            <constraint firstItem="ARj-v0-5qQ" firstAttribute="top" secondItem="Rlc-gP-ZIu" secondAttribute="top" constant="30" id="S9J-KU-V6b"/>
+                            <constraint firstItem="bpU-iQ-f39" firstAttribute="top" secondItem="AOB-j7-5PG" secondAttribute="bottom" constant="5" id="SHm-A5-lcc"/>
+                            <constraint firstItem="Rlc-gP-ZIu" firstAttribute="trailing" secondItem="ARj-v0-5qQ" secondAttribute="trailing" constant="20" id="nKf-Ft-yQG"/>
+                            <constraint firstItem="Rlc-gP-ZIu" firstAttribute="trailing" secondItem="AOB-j7-5PG" secondAttribute="trailing" constant="15" id="oXw-8m-aBp"/>
+                            <constraint firstItem="ARj-v0-5qQ" firstAttribute="leading" secondItem="Rlc-gP-ZIu" secondAttribute="leading" constant="20" id="pvd-r6-tR3"/>
+                            <constraint firstItem="AOB-j7-5PG" firstAttribute="leading" secondItem="Rlc-gP-ZIu" secondAttribute="leading" constant="15" id="ufv-80-KO0"/>
+                            <constraint firstItem="Rlc-gP-ZIu" firstAttribute="trailing" secondItem="bpU-iQ-f39" secondAttribute="trailing" constant="15" id="zqu-rI-Gau"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pN5-c1-TM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="-72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
