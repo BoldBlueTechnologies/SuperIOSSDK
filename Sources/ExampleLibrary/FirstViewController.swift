@@ -25,3 +25,10 @@ public class FirstViewController: UIViewController {
 //        navigationController?.pushViewController(secondVC, animated: true)
 //    }
 }
+public extension UIViewController{
+       
+    static func getStoryboardVC() -> UIViewController {
+        let storyboard = UIStoryboard(name: String(describing: self), bundle: nil) // Use Bundle.module
+           return storyboard.instantiateInitialViewController()!
+       }
+}
