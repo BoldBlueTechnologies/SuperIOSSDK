@@ -8,28 +8,30 @@
 import UIKit
 
 public class FirstViewController: UIViewController {
-
+    
+    lazy private var sampleLabel: UILabel = {
+           let label = UILabel()
+           label.translatesAutoresizingMaskIntoConstraints = false
+           label.text = "Hello World!"
+           label.textColor = UIColor.white
+           return label
+       }()
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .purple
-//
-//        let button = UIButton(type: .system)
-//        button.setTitle("Go to Second Screen v2", for: .normal)
-//        button.addTarget(self, action: #selector(goToSecondScreen), for: .touchUpInside)
-//        button.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
-//        view.addSubview(button)
+        
+        self.view.backgroundColor = UIColor.black
+        self.view.addSubview(self.sampleLabel)
+        self.setUpConstraints()
     }
-
-//    @objc private func goToSecondScreen() {
-//        let secondVC = SecondViewController()
-//        navigationController?.pushViewController(secondVC, animated: true)
-//    }
-}
-public extension UIViewController{
-       
-    static func createViewController() -> UIViewController {
-        let storyboard = UIStoryboard(name: "FirstViewController", bundle: Bundle.module)
-        return storyboard.instantiateInitialViewController() as! FirstViewController
+    
+    func setUpConstraints() {
+        let sampleLabelConstraints = [
+            self.sampleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.sampleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ]
+        NSLayoutConstraint.activate(sampleLabelConstraints)
     }
-
+    
 }
+
