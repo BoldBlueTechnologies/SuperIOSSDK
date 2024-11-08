@@ -11,14 +11,18 @@ let package = Package(
             name: "SuperSDK",
             targets: ["SuperSDK"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.10.0"))
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "SuperSDK"),
+            name: "SuperSDK",
+            dependencies:["Alamofire"]),
         .testTarget(
             name: "SuperSDKTests",
-            dependencies: ["SuperSDK"]
+            dependencies: ["SuperSDK","Alamofire"]
         ),
     ]
 )

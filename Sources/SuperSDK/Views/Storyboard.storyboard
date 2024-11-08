@@ -17,42 +17,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SuperMx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARj-v0-5qQ">
-                                <rect key="frame" x="20" y="89" width="353" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOB-j7-5PG">
-                                <rect key="frame" x="15" y="125" width="363" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpU-iQ-f39">
-                                <rect key="frame" x="15" y="151" width="363" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="up1-bM-Z6K">
+                                <rect key="frame" x="20" y="79" width="353" height="719"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob3-jm-cpi">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aYU-aa-5WW">
+                                        <rect key="frame" x="0.0" y="30" width="353" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ge0-xS-zFL"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bld-Oi-02a" id="k6g-rV-aQ0"/>
+                                        </connections>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1XT-4t-2md">
+                                        <rect key="frame" x="0.0" y="90.333333333333314" width="353" height="628.66666666666674"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rlc-gP-ZIu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bpU-iQ-f39" firstAttribute="leading" secondItem="Rlc-gP-ZIu" secondAttribute="leading" constant="15" id="6LL-SP-sDG"/>
-                            <constraint firstItem="AOB-j7-5PG" firstAttribute="top" secondItem="ARj-v0-5qQ" secondAttribute="bottom" constant="15" id="EP6-hC-efw"/>
-                            <constraint firstItem="ARj-v0-5qQ" firstAttribute="top" secondItem="Rlc-gP-ZIu" secondAttribute="top" constant="30" id="S9J-KU-V6b"/>
-                            <constraint firstItem="bpU-iQ-f39" firstAttribute="top" secondItem="AOB-j7-5PG" secondAttribute="bottom" constant="5" id="SHm-A5-lcc"/>
-                            <constraint firstItem="Rlc-gP-ZIu" firstAttribute="trailing" secondItem="ARj-v0-5qQ" secondAttribute="trailing" constant="20" id="nKf-Ft-yQG"/>
-                            <constraint firstItem="Rlc-gP-ZIu" firstAttribute="trailing" secondItem="AOB-j7-5PG" secondAttribute="trailing" constant="15" id="oXw-8m-aBp"/>
-                            <constraint firstItem="ARj-v0-5qQ" firstAttribute="leading" secondItem="Rlc-gP-ZIu" secondAttribute="leading" constant="20" id="pvd-r6-tR3"/>
-                            <constraint firstItem="AOB-j7-5PG" firstAttribute="leading" secondItem="Rlc-gP-ZIu" secondAttribute="leading" constant="15" id="ufv-80-KO0"/>
-                            <constraint firstItem="Rlc-gP-ZIu" firstAttribute="trailing" secondItem="bpU-iQ-f39" secondAttribute="trailing" constant="15" id="zqu-rI-Gau"/>
+                            <constraint firstItem="up1-bM-Z6K" firstAttribute="leading" secondItem="Rlc-gP-ZIu" secondAttribute="leading" constant="20" id="EFH-Eg-aJn"/>
+                            <constraint firstItem="up1-bM-Z6K" firstAttribute="top" secondItem="Rlc-gP-ZIu" secondAttribute="top" constant="20" id="SbI-LR-8iC"/>
+                            <constraint firstItem="Rlc-gP-ZIu" firstAttribute="trailing" secondItem="up1-bM-Z6K" secondAttribute="trailing" constant="20" id="cKQ-9X-Jgx"/>
+                            <constraint firstItem="Rlc-gP-ZIu" firstAttribute="bottom" secondItem="up1-bM-Z6K" secondAttribute="bottom" constant="20" id="pEa-7E-Iix"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pokemonsTableView" destination="1XT-4t-2md" id="Pgv-ZP-eL5"/>
+                        <outlet property="pokemonsearchBar" destination="aYU-aa-5WW" id="2NJ-fL-AUz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pN5-c1-TM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="-72"/>
+            <point key="canvasLocation" x="-43.511450381679388" y="-72.535211267605632"/>
         </scene>
     </scenes>
     <resources>
