@@ -12,13 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-
-        let button = UIButton(type: .system)
-        button.setTitle("Open Insurance Flow", for: .normal)
-        button.addTarget(self, action: #selector(openInsuranceFlow), for: .touchUpInside)
-        button.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
-        view.addSubview(button)
+//        view.backgroundColor = .white
+//
+//        let button = UIButton(type: .system)
+//        button.setTitle("Open Insurance Flow", for: .normal)
+//        button.addTarget(self, action: #selector(openInsuranceFlow), for: .touchUpInside)
+//        button.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
+//        view.addSubview(button)
     }
 
     @objc private func openInsuranceFlow() {
