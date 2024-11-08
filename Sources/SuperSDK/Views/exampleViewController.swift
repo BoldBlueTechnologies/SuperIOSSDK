@@ -24,6 +24,7 @@ public class exampleViewController: UIViewController {
 //        
 //        pokemonsTableView.dataSource = self
 //        pokemonsTableView.delegate = self
+        getAllPokemons() 
     }
     
     func getAllPokemons() {
