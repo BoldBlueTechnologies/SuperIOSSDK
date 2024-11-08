@@ -7,9 +7,7 @@
 
 import Foundation
 
-struct Pokemon: Decodable, Identifiable {
-    let id: Int
-    let attack: Int
+struct Pokemon: Decodable {
     let name: String
-    let imageUrl: String
+    let url: String
 }

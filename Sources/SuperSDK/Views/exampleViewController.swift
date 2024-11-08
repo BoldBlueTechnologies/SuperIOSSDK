@@ -12,7 +12,7 @@ public class exampleViewController: UIViewController {
     
     public static let storyboardVC = UIStoryboard(name: "Storyboard", bundle: Bundle.module).instantiateInitialViewController()!
     
-    var pokemones: [String] = ["1","2","3","4","5","6","7","8","9","10"]
+    var pokemones: [Pokemon] = []
     
     @IBOutlet weak var pokemonsearchBar: UISearchBar!
     @IBOutlet weak var pokemonsTableView: UITableView!
@@ -24,11 +24,11 @@ public class exampleViewController: UIViewController {
 //        
 //        pokemonsTableView.dataSource = self
 //        pokemonsTableView.delegate = self
-        getAllPokemons() 
+        getAllPokemons()
     }
     
     func getAllPokemons() {
-        AF.request("https://pokeapi.co/api/v2/pokemon").responseJSON { response in
+        AF.request("https://pokeapi.co/api/v2/pokemon").responseDecodable(of: Pokemon.self) { (response) in
             debugPrint(response)
         }
     }
