@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "SuperSDK",
+    platforms: [
+        .iOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -12,17 +15,22 @@ let package = Package(
             targets: ["SuperSDK"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.10.0"))
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.10.0")),
+        .package(url: "https://github.com/airbnb/lottie-spm.git", from: "4.5.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "SuperSDK",
-            dependencies:["Alamofire"]),
+            dependencies: [
+                .product(name: "Alamofire", package: "Alamofire"),
+                .product(name: "Lottie", package: "lottie-spm"),
+            ]
+        ),
         .testTarget(
             name: "SuperSDKTests",
-            dependencies: ["SuperSDK","Alamofire"]
+            dependencies: ["SuperSDK"]
         ),
     ]
 )

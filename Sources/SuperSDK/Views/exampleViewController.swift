@@ -7,10 +7,14 @@
 
 import UIKit
 import Alamofire
+import Lottie
 
 public class exampleViewController: UIViewController {
     
     public static let storyboardVC = UIStoryboard(name: "Storyboard", bundle: Bundle.module).instantiateInitialViewController()!
+    public static let reusableCell = UINib(nibName: "pokemonTableViewCell", bundle: nil)
+    
+    var animationView: LottieAnimationView?
     
     var pokemones: [Pokemon] = []
     
@@ -20,10 +24,34 @@ public class exampleViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-//        pokemonsTableView.register(UINib(nibName: "pokemonTableViewCell", bundle: nil), forCellReuseIdentifier: "pokemonTableViewCell")
-//        
-//        pokemonsTableView.dataSource = self
-//        pokemonsTableView.delegate = self
+        pokemonsTableView.register(exampleViewController.reusableCell, forCellReuseIdentifier: "pokemonTableViewCell")
+//
+        pokemonsTableView.dataSource = self
+        pokemonsTableView.delegate = self
+        
+        
+        animationView = .init(name: "animationTest")
+         
+         animationView!.frame = view.bounds
+         
+         // 3. Set animation content mode
+         
+         animationView!.contentMode = .scaleAspectFit
+         
+         // 4. Set animation loop mode
+         
+         animationView!.loopMode = .loop
+         
+         // 5. Adjust animation speed
+         
+         animationView!.animationSpeed = 0.5
+         
+         view.addSubview(animationView!)
+         
+         // 6. Play animation
+         
+         animationView!.play()
+        
         getAllPokemons()
     }
     
