@@ -76,9 +76,26 @@
                     <view key="view" contentMode="scaleToFill" id="HrN-oN-Bql">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8d-qg-uNe" customClass="LottieAnimationView" customModule="Lottie">
+                                <rect key="frame" x="71.666666666666686" y="301" width="250" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="7r6-ei-jFc"/>
+                                    <constraint firstAttribute="height" constant="250" id="UKD-1X-xVr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q2x-19-MRt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X8d-qg-uNe" firstAttribute="centerY" secondItem="HrN-oN-Bql" secondAttribute="centerY" id="QNP-jk-elp"/>
+                            <constraint firstItem="X8d-qg-uNe" firstAttribute="centerX" secondItem="HrN-oN-Bql" secondAttribute="centerX" id="YVM-t8-SgM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="X8d-qg-uNe" id="heE-q5-zYd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZe-G1-y46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
