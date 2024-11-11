@@ -12,7 +12,7 @@ import Lottie
 public class exampleViewController: UIViewController {
     
     public static let storyboardVC = UIStoryboard(name: "Storyboard", bundle: Bundle.module).instantiateInitialViewController()!
-    public static let reusableCell = UINib(nibName: "pokemonTableViewCell", bundle: nil)
+    public static let reusableCell = UINib(nibName: "pokemonTableViewCell", bundle: Bundle.module)
     
     var animationView: LottieAnimationView?
     
@@ -52,7 +52,4 @@ extension exampleViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     
-}
-extension Bundle {
-    public static let blah = Bundle.module
 }
