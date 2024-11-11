@@ -21,6 +21,14 @@ public class exampleViewController: UIViewController {
     @IBOutlet weak var pokemonsearchBar: UISearchBar!
     @IBOutlet weak var pokemonsTableView: UITableView!
     
+    @IBAction func goToLottie(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Storyboard", bundle: Bundle.module)
+        let switchViewController = storyboard.instantiateViewController(withIdentifier: "lottieExample")
+        switchViewController.modalPresentationStyle = .popover
+        switchViewController.isModalInPresentation = true
+        self.present(UINavigationController(rootViewController: switchViewController), animated: true, completion: nil)
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
 
