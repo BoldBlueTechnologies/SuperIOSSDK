@@ -20,14 +20,14 @@ class lottieExampleViewController: UIViewController {
           
           // 2. Set animation loop mode
           
-          animationView.loopMode = .loop
+        animationView.loopMode = .loop
           
           // 3. Adjust animation speed
           
-          animationView.animationSpeed = 0.5
+        animationView.animationSpeed = 0.5
           
           // 4. Play animation
-          animationView.play()
+        animationView.play()
         
     }
     
