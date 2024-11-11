@@ -10,7 +10,7 @@ import Lottie
 
 class lottieExampleViewController: UIViewController {
 
-    private var animationView: LottieAnimationView?
+    var animationView: LottieAnimationView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
