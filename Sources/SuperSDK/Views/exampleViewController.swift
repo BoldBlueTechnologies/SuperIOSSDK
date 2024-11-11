@@ -16,7 +16,7 @@ public class exampleViewController: UIViewController {
     
     var animationView: LottieAnimationView?
     
-    var pokemones: [Pokemon] = []
+    var pokemones: [String] = ["1","2","3"]
     
     @IBOutlet weak var pokemonsearchBar: UISearchBar!
     @IBOutlet weak var pokemonsTableView: UITableView!
@@ -28,29 +28,6 @@ public class exampleViewController: UIViewController {
 //
         pokemonsTableView.dataSource = self
         pokemonsTableView.delegate = self
-        
-        
-        animationView = .init(name: "animationTest")
-         
-         animationView!.frame = view.bounds
-         
-         // 3. Set animation content mode
-         
-         animationView!.contentMode = .scaleAspectFit
-         
-         // 4. Set animation loop mode
-         
-         animationView!.loopMode = .loop
-         
-         // 5. Adjust animation speed
-         
-         animationView!.animationSpeed = 0.5
-         
-         view.addSubview(animationView!)
-         
-         // 6. Play animation
-         
-         animationView!.play()
         
         getAllPokemons()
     }
