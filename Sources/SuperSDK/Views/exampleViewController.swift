@@ -53,3 +53,6 @@ extension exampleViewController: UITableViewDataSource, UITableViewDelegate {
     
     
 }
+extension Bundle {
+    public static let blah = Bundle.module
+}
