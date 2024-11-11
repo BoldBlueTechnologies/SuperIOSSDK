@@ -15,7 +15,7 @@ class lottieExampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let url = URL(string: "https://assets5.lottiefiles.com/datafiles/zc3XRzudyWE36ZBJr7PIkkqq0PFIrIBgp4ojqShI/newAnimation.json") else {
+        guard let url = URL(string: "https://lottie.host/bfe3bdb1-6c05-49f7-ab08-bb72dfdae200/5ZLlU6GveN.json") else {
             return
         }
         
