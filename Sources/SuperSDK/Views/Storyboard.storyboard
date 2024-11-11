@@ -94,7 +94,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="animationView" destination="X8d-qg-uNe" id="heE-q5-zYd"/>
+                        <outlet property="animationLottieView" destination="X8d-qg-uNe" id="0XQ-mZ-yFV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZe-G1-y46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
