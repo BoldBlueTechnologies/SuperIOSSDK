@@ -10,24 +10,32 @@ import Lottie
 
 class lottieExampleViewController: UIViewController {
 
-    @IBOutlet weak var animationLottieView: LottieAnimationView!
+    private var animationView: LottieAnimationView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        animationLottieView = .init(name: "animationTest")
-        animationLottieView.contentMode = .scaleAspectFit
+        animationView = .init(name: "animationTest")
           
-          // 2. Set animation loop mode
+          animationView!.frame = view.bounds
           
-        animationLottieView.loopMode = .loop
+          // 3. Set animation content mode
           
-          // 3. Adjust animation speed
+          animationView!.contentMode = .scaleAspectFit
           
-        animationLottieView.animationSpeed = 0.5
+          // 4. Set animation loop mode
           
-          // 4. Play animation
-        animationLottieView.play()
+          animationView!.loopMode = .loop
+          
+          // 5. Adjust animation speed
+          
+          animationView!.animationSpeed = 0.5
+          
+          view.addSubview(animationView!)
+          
+          // 6. Play animation
+          
+          animationView!.play()
         
     }
     
