@@ -18,7 +18,8 @@ class lottieExampleViewController: UIViewController {
         // 2. Start LottieAnimationView with animation name (without extension)
           
           animationView = .init(name: "animationTest")
-          
+        
+        
           animationView!.frame = view.bounds
           
           // 3. Set animation content mode
@@ -33,6 +34,8 @@ class lottieExampleViewController: UIViewController {
           
           animationView!.animationSpeed = 0.5
           
+        view.backgroundColor = .red
+        
           view.addSubview(animationView!)
           
           // 6. Play animation
