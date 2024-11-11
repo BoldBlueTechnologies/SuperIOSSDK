@@ -15,7 +15,8 @@ class lottieExampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        animationView = .init(name: "frankie")
+        animationView = LottieAnimationView(name: "frankie")
+//        animationView = .init(name: "frankie")
           
           animationView!.frame = view.bounds
           
