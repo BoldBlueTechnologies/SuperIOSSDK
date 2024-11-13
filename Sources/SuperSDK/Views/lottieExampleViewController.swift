@@ -43,7 +43,10 @@ class lottieExampleViewController: UIViewController {
 //            self?.animationView?.play()
 //        }, animationCache: DefaultAnimationCache.sharedCache)
         
-        animationView = LottieAnimationView(name: "frankie")
+        let path = Bundle.main.path(forResource: "frankie",
+                                    ofType: "json") ?? ""
+        
+        animationView = .init(filePath: path)
         
         animationView!.frame = view.bounds
         

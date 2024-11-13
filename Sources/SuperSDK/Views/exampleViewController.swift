@@ -7,14 +7,11 @@
 
 import UIKit
 import Alamofire
-import Lottie
 
 public class exampleViewController: UIViewController {
     
     public static let storyboardVC = UIStoryboard(name: "Storyboard", bundle: Bundle.module).instantiateInitialViewController()!
     public static let reusableCell = UINib(nibName: "pokemonTableViewCell", bundle: Bundle.module)
-    
-    var animationView: LottieAnimationView?
     
     var pokemones: [String] = ["1","2","3"]
     
