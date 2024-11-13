@@ -76,8 +76,22 @@
                     <view key="view" contentMode="scaleToFill" id="HrN-oN-Bql">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1Z-9v-3Zn">
+                                <rect key="frame" x="71.666666666666686" y="301" width="250" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="79H-G2-qCJ"/>
+                                    <constraint firstAttribute="height" constant="250" id="Fqh-UY-692"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q2x-19-MRt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C1Z-9v-3Zn" firstAttribute="centerY" secondItem="HrN-oN-Bql" secondAttribute="centerY" id="15a-FK-tax"/>
+                            <constraint firstItem="C1Z-9v-3Zn" firstAttribute="centerX" secondItem="HrN-oN-Bql" secondAttribute="centerX" id="pJT-Pk-aVe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZe-G1-y46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
