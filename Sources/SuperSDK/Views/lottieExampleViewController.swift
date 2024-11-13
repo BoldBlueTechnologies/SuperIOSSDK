@@ -46,7 +46,7 @@ class lottieExampleViewController: UIViewController {
         let path = Bundle.main.path(forResource: "frankie",
                                     ofType: "json") ?? ""
         
-        animationView = .init(filePath: path)
+        animationView = .init(name: "frankie", bundle: Bundle(path: Bundle.main.path(forResource: "frankie", ofType: "bundle")!)!)
         
         animationView!.frame = view.bounds
         
